@@ -46,6 +46,8 @@ public class MainManager : MonoBehaviour
         }
 
         LoadData();
+        currentPlayer = MenuHandler.instance.GetName();
+
         ScoreText.text = $"Score : 0 Name: {currentPlayer}";
         HighScoreText.text = $"Score : {highScore} Name: {highScorePlayer}";
     }
