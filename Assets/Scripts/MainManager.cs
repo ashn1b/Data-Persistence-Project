@@ -46,7 +46,8 @@ public class MainManager : MonoBehaviour
         }
 
         LoadData();
-        HighScoreText.text = "Best Score: " + highScore + " Name: " + highScorePlayer;
+        ScoreText.text = $"Score : 0 Name: {currentPlayer}";
+        HighScoreText.text = $"Score : {highScore} Name: {highScorePlayer}";
     }
 
     private void Update()
@@ -74,14 +75,14 @@ public class MainManager : MonoBehaviour
 
         if (m_Points > highScore)
         {
-            HighScoreText.text = "Best Score: " + m_Points + " Name: " + currentPlayer;
+            HighScoreText.text = $"Score : {m_Points} Name: {currentPlayer}";
         }
     }
 
     void AddPoint(int point)
     {
         m_Points += point;
-        ScoreText.text = $"Score : {m_Points}";
+        ScoreText.text = $"Score : {m_Points} Name: {currentPlayer}";
     }
 
     public void GameOver()
